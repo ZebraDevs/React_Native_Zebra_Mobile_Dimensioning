@@ -1,0 +1,4 @@
+<resources>
+    <string name="not_supported_message">Dimensioning Not Supported</string>
+    <string name="not_installed_message">Framework Not Installed</string>
+</resources>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="not_supported_message">No se admite el dimensionado</string>
+    <string name="not_installed_message">Marco no instalado</string>
+</resources>

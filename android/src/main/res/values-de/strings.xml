@@ -1,0 +1,4 @@
+<resources>
+    <string name="not_supported_message">Messung wird nicht unterstützt</string>
+    <string name="not_installed_message">Framework nicht installiert</string>
+</resources>

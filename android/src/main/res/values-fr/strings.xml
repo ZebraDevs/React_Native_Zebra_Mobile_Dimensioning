@@ -1,0 +1,4 @@
+<resources>
+    <string name="not_supported_message">Dimensionnement non pris en charge</string>
+    <string name="not_installed_message">Structure non installée</string>
+</resources>
