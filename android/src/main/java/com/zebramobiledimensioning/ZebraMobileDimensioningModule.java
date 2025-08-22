@@ -15,14 +15,16 @@ import android.os.Looper;
 import android.util.Log;
 
 import com.facebook.react.bridge.ActivityEventListener;
+import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.BaseActivityEventListener;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Arguments;
-import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.bridge.WritableArray;
+import com.facebook.react.bridge.WritableNativeArray;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.zebramobiledimensioning.DimensioningConstants;
 
@@ -222,6 +224,12 @@ public class ZebraMobileDimensioningModule extends ReactContextBaseJavaModule {
         map.putInt(key, (Integer) value);
       } else if (value instanceof String) {
         map.putString(key, (String) value);
+      } else if (value instanceof String[]) {
+        WritableArray writableArray = new WritableNativeArray();
+        for (String s : (String[]) value) {
+            writableArray.pushString(s);
+        }
+        map.putArray(key, writableArray);
       } else if (value instanceof Boolean) {
         map.putBoolean(key, (Boolean) value);
       } else if (value instanceof Double) {
